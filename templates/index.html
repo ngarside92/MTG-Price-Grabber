@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Card URL</title>
+</head>
+<body>
+    <h1>Enter Set and Card Name</h1>
+    <form action="/process" method="post">
+        <label for="set_name">Set Name:</label>
+        <input type="text" id="set_name" name="set_name" required><br><br>
+        
+        <label for="card_name">Card Name:</label>
+        <input type="text" id="card_name" name="card_name" required><br><br>
+        
+        <button type="submit">Generate URL and Process</button>
+    </form>
+</body>
+</html>
