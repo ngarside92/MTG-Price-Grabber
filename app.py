@@ -19,9 +19,12 @@ def process():
     complete_url = generate_complete_url(set_name, card_name)
     
     # Call the function to process the URL and get the results
-    result = process_url(complete_url)  # Pass complete_url directly to process_url
+    result = process_url()
+    result["url"] = complete_url  # Include the generated URL in the result
     
-    return jsonify(result)
+    # Render the output using an HTML template
+    return render_template('result.html', **result)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
